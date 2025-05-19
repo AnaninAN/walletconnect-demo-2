@@ -1,4 +1,4 @@
-import { mainnet, arbitrum, sepolia } from '@reown/appkit/networks';
+import { mainnet } from '@reown/appkit/networks';
 import type { AppKitNetwork } from '@reown/appkit/networks';
 
 export const projectId =
@@ -15,7 +15,4 @@ export const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/179229932'],
 };
 
-export const networks = [mainnet, arbitrum, sepolia] as [
-  AppKitNetwork,
-  ...AppKitNetwork[]
-];
+export const networks = [mainnet] as [AppKitNetwork, ...AppKitNetwork[]];
