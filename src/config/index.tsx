@@ -8,6 +8,6 @@ if (!projectId) {
 export const metadata = {
   name: 'AppKit',
   description: 'AppKit Example',
-  url: 'https://example.com', // origin must match your domain & subdomain
+  url: 'https://walletconnect-demo-2.vercel.app/',
   icons: ['https://avatars.githubusercontent.com/u/179229932'],
 };
