@@ -4,6 +4,8 @@ import {
   useAppKitAccount,
 } from '@reown/appkit/react';
 
+import { TransferButton } from './TransferButton';
+
 export const ActionButtonList = () => {
   const { disconnect } = useDisconnect();
   const { open } = useAppKit();
@@ -22,6 +24,7 @@ export const ActionButtonList = () => {
       <div className="action-button-list">
         <button onClick={() => open()}>Open</button>
         <button onClick={handleDisconnect}>Disconnect</button>
+        <TransferButton />
       </div>
     )
   );

@@ -3,31 +3,27 @@ import './App.css';
 import { createAppKit } from '@reown/appkit/react';
 import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { WagmiAdapter } from '@reown/appkit-adapter-wagmi';
-import { mainnet } from '@reown/appkit/networks';
 
 import { ActionButtonList } from './components/ActionButtonList';
 import { InfoList } from './components/InfoList';
 
-import { projectId, metadata } from './config';
+import { projectId, metadata, wagmiAdapter, networks } from './config';
 
 const queryClient = new QueryClient();
 
-const wagmiAdapter = new WagmiAdapter({
-  networks: [mainnet],
+const generalConfig = {
   projectId,
-  ssr: true,
-});
+  networks,
+  metadata,
+};
 
 createAppKit({
   adapters: [wagmiAdapter],
-  networks: [mainnet],
-  projectId,
-  metadata,
+  ...generalConfig,
   features: {
     analytics: true,
+    pay: true,
   },
-  defaultNetwork: mainnet,
 });
 
 function App() {
