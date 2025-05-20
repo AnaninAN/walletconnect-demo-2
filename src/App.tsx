@@ -24,6 +24,7 @@ createAppKit({
     analytics: true,
     pay: true,
   },
+  defaultNetwork: networks[0],
 });
 
 function App() {
